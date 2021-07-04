@@ -48,7 +48,7 @@ public class LibraryCype1 {
 	public void gravarLivros()  {
 		ObjectOutputStream outputStream = null;
 		try {
-			outputStream = new ObjectOutputStream (new FileOutputStream("C:\\Users\\cynnm\\eclipse-workspace\\LibraryCype.dat"));
+			outputStream = new ObjectOutputStream (new FileOutputStream("C:\\Users\\Public\\LibraryCype.dados"));
 			for(Livros mani:livross) {
 				outputStream.writeObject(mani);
 			}
@@ -70,7 +70,7 @@ public class LibraryCype1 {
 	public void recuperarLivros() {
 		ObjectInputStream inputStream = null;
 		try {
-			inputStream	= new ObjectInputStream (new FileInputStream ("c:\\temp\\livros.dat"));
+			inputStream	= new ObjectInputStream (new FileInputStream ("c:\\Users\\Public\\LibraryCype.dados"));
 			Object obj = null;
 			while((obj = inputStream.readObject ()) != null) {
 				if (obj instanceof Romance)  
